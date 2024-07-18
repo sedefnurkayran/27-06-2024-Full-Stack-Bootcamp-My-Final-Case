@@ -10,7 +10,7 @@ namespace BlogWebsite.DAL
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<About> abouts => Set<About>();
-        public DbSet<Article> articles => Set<Article>();
+        public DbSet<Blog> blogs => Set<Blog>();
         public DbSet<Category> categories => Set<Category>();
         public DbSet<Comment> comments => Set<Comment>();
         public DbSet<Contact> contacts => Set<Contact>();

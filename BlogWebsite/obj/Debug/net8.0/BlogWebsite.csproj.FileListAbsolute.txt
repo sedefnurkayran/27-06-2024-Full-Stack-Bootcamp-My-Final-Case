@@ -13,7 +13,6 @@ C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWeb
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.RazorAssemblyInfo.cache
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.RazorAssemblyInfo.cs
-C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.sourcelink.json
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\staticwebassets\msbuild.BlogWebsite.Microsoft.AspNetCore.StaticWebAssets.props

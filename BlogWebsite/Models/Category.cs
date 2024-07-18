@@ -11,7 +11,7 @@ namespace BlogWebsite.Models
         public bool CategoryStatus { get; set; }
 
         //RELATIONSHIPS       
-        public ICollection<Article> Articles { get; set; } = new List<Article>();
+        public ICollection<Blog> Blogs { get; set; } = new List<Blog>();
 
 
     }
