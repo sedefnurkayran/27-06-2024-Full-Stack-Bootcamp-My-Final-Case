@@ -1,10 +1,13 @@
+using BlogApp.Data.Concrete.EfCore;
 using BlogWebsite.DAL;
+using BlogWebsite.DAL.Abstract;
+using BlogWebsite.DAL.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews();   //Controllerlari Viewslerle birlikte kullansin.
 
 //DbConnection
 builder.Services.AddDbContext<DataContext>(options =>
@@ -14,8 +17,19 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(connectionString);
 });
 
+//Ya da 
+// builder.Services.AddDbContext<DataContext>(options =>
+// {
+//     options.UseSqlite(builder.Configuration["ConnectionStrings:sql_connection"]);
+// });
+//bu daha kisasi.
+
+builder.Services.AddScoped<IBlogRepository, EfBlogRepository>();
 
 var app = builder.Build();
+
+//SEEDDATA YI KULLANSIN.
+SeedData.TestVerileriniDoldur(app);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -26,7 +40,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseStaticFiles();  //web projesi sablonu kullansaydim bunu ekleyecektim. wwwroot icn.
 
 app.UseRouting();
 

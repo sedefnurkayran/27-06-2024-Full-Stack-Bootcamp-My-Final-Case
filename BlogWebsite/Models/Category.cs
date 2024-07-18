@@ -6,12 +6,12 @@ namespace BlogWebsite.Models
     {
         [Key]
         public int CategoryId { get; set; }
-        public string CategoryName { get; set; } = null!;
-        public string CategoryDescription { get; set; } = string.Empty!;
+        public string? CategoryName { get; set; } //= null!;
+        public string? CategoryDescription { get; set; }// = string.Empty!;
         public bool CategoryStatus { get; set; }
 
         //RELATIONSHIPS       
-        public ICollection<Blog> Blogs { get; set; } = new List<Blog>();
+        public List<Blog> Blogs { get; set; } = new List<Blog>();
 
 
     }

@@ -3,6 +3,7 @@ using System;
 using BlogWebsite.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogWebsite.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240718181822_TagClass")]
+    partial class TagClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.6.24327.4");
@@ -53,18 +56,23 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("AboutDetails1")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AboutDetails2")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AboutImage2")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AboutImagel")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("AboutMapLocation")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("AboutStatus")
@@ -82,21 +90,25 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("BlogContent")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("BlogCreateDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BlogImage")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("BlogStatus")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("BlogThumbnailImage")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BlogTitle")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("CategoryId")
@@ -121,9 +133,11 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CategoryDescription")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CategoryName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("CategoryStatus")
@@ -154,19 +168,16 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CommentUserName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CommentUserSurname")
+                        .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("CommentId");
 
                     b.HasIndex("BlogId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("comments");
                 });
@@ -181,18 +192,22 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ContactEmail")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ContactMessage")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("ContactStatus")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ContactSubject")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("ContactId");
@@ -211,20 +226,50 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserMail")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserPassword")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("UserStatus")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("UserSurname")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("UserTypeId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("UserId");
 
+                    b.HasIndex("UserTypeId");
+
                     b.ToTable("users");
+                });
+
+            modelBuilder.Entity("BlogWebsite.Models.UserType", b =>
+                {
+                    b.Property<int>("UserTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("UserTypeStatus")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("UserTypeId");
+
+                    b.ToTable("userTypes");
                 });
 
             modelBuilder.Entity("BlogTag", b =>
@@ -251,7 +296,7 @@ namespace BlogWebsite.Migrations
                         .IsRequired();
 
                     b.HasOne("BlogWebsite.Models.User", "User")
-                        .WithMany("Blogs")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -269,15 +314,18 @@ namespace BlogWebsite.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BlogWebsite.Models.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
+                    b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("BlogWebsite.Models.User", b =>
+                {
+                    b.HasOne("BlogWebsite.Models.UserType", "UserType")
+                        .WithMany("Users")
+                        .HasForeignKey("UserTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Blog");
-
-                    b.Navigation("User");
+                    b.Navigation("UserType");
                 });
 
             modelBuilder.Entity("BlogWebsite.Models.Blog", b =>
@@ -290,11 +338,9 @@ namespace BlogWebsite.Migrations
                     b.Navigation("Blogs");
                 });
 
-            modelBuilder.Entity("BlogWebsite.Models.User", b =>
+            modelBuilder.Entity("BlogWebsite.Models.UserType", b =>
                 {
-                    b.Navigation("Blogs");
-
-                    b.Navigation("Comments");
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

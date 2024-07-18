@@ -1,3 +1,4 @@
+using BlogApp.Models;
 using BlogWebsite.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
@@ -14,8 +15,10 @@ namespace BlogWebsite.DAL
         public DbSet<Category> categories => Set<Category>();
         public DbSet<Comment> comments => Set<Comment>();
         public DbSet<Contact> contacts => Set<Contact>();
+        public DbSet<Tag> Tags => Set<Tag>();
+
         public DbSet<User> users => Set<User>();
-        public DbSet<UserType> userTypes => Set<UserType>();
+        //public DbSet<UserType> userTypes => Set<UserType>();
 
     }
 }

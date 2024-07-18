@@ -3,6 +3,7 @@ using System;
 using BlogWebsite.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogWebsite.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240718185915_DeleteUserTypeC")]
+    partial class DeleteUserTypeC
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.6.24327.4");
@@ -159,14 +162,9 @@ namespace BlogWebsite.Migrations
                     b.Property<string>("CommentUserSurname")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("CommentId");
 
                     b.HasIndex("BlogId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("comments");
                 });
@@ -251,7 +249,7 @@ namespace BlogWebsite.Migrations
                         .IsRequired();
 
                     b.HasOne("BlogWebsite.Models.User", "User")
-                        .WithMany("Blogs")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -269,15 +267,7 @@ namespace BlogWebsite.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BlogWebsite.Models.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Blog");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("BlogWebsite.Models.Blog", b =>
@@ -288,13 +278,6 @@ namespace BlogWebsite.Migrations
             modelBuilder.Entity("BlogWebsite.Models.Category", b =>
                 {
                     b.Navigation("Blogs");
-                });
-
-            modelBuilder.Entity("BlogWebsite.Models.User", b =>
-                {
-                    b.Navigation("Blogs");
-
-                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }
