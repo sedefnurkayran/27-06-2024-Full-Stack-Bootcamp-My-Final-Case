@@ -13,6 +13,9 @@ namespace BlogWebsite.Models
         public DateTime BlogCreateDate { get; set; }
         public bool BlogStatus { get; set; }
 
+
+
+
         //RELATIONSHIPS
         public int CategoryId { get; set; }
         public Category Category { get; set; } = null!;
