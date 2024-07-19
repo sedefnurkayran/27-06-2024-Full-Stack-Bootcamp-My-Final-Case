@@ -6,4 +6,5 @@ N Tier Arc. ?
 4. DB context olusturuldu.
 5. Program.cs ve appsettings.Development.json dosyasina DB connectionStringi yazildi. Migrations yapildi.
 6. Proje katmanlarina referans ekleme?
-7. Article-Category & Article-Comment&User-UserType iliskisi tanimladin. Migration yapildi.
+7. Abstract-Concrete dosyalari olusturuldu. 
+8. SeedData eklendi. Category - Tag - User - Blog- Comment arasindaki iliski kuruldu.
