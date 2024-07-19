@@ -8,3 +8,4 @@ N Tier Arc. ?
 6. Proje katmanlarina referans ekleme?
 7. Abstract-Concrete dosyalari olusturuldu. 
 8. SeedData eklendi. Category - Tag - User - Blog- Comment arasindaki iliski kuruldu.
+9. CategoryRepository and interface, GenericRepository and interface are created.
