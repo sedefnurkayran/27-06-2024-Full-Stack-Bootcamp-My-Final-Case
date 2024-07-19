@@ -5,13 +5,13 @@ namespace BlogWebsite.Controllers;
 
 public class BlogController : Controller
 {
-    private IBlogRepository _repository;
-    public BlogController(IBlogRepository repository)
+    private IBlogDal _repository;
+    public BlogController(IBlogDal repository)
     {
         _repository = repository;
     }
-    public IActionResult Index()
-    {
-        return View(_repository.Blogs.ToList());
-    }
+    // public IActionResult Index()
+    // {
+    //     //return View(_repository.blog.ToList());
+    // }
 }

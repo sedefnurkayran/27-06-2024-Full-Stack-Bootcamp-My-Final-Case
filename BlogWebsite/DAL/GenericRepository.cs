@@ -1,12 +1,12 @@
 using BlogWebsite.DAL.Abstract;
 
-namespace BlogWebsite.DAL.Concrete
+namespace BlogWebsite.DAL
 {
 
-    public class EfGenericRepository<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericDal<T> where T : class
     {
         private DataContext _context;
-        public EfGenericRepository(DataContext context)
+        public GenericRepository(DataContext context)
         {
             _context = context;
         }

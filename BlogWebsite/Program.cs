@@ -1,7 +1,7 @@
 using BlogApp.Data.Concrete.EfCore;
 using BlogWebsite.DAL;
 using BlogWebsite.DAL.Abstract;
-using BlogWebsite.DAL.Concrete;
+using BlogWebsite.DAL.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +24,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 // });
 //bu daha kisasi.
 
-builder.Services.AddScoped<IBlogRepository, EfBlogRepository>();
+builder.Services.AddScoped<IBlogDal, EfBlogRepository>();
 
 var app = builder.Build();
 
