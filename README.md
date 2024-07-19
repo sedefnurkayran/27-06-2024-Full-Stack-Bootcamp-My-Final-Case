@@ -9,5 +9,6 @@ N Tier Arc. ?
 7. Abstract-Concrete dosyalari olusturuldu. 
 8. SeedData eklendi. Category - Tag - User - Blog- Comment arasindaki iliski kuruldu.
 9. CategoryRepository and interface, GenericRepository and interface are created.
-
-10. <i class="fas fa-eye"></i> @item.Category.CategoryName</a> <!--Eager Load →
+10. DRY principle
+11. <i class="fas fa-eye"></i> @item.Category.CategoryName</a> <!--Eager Load →
+12. @item.BlogContent.Substring(0,item.BlogContent.Substring(0,15).LastIndexOf(" "))... --> Devamlilik kontrolü
