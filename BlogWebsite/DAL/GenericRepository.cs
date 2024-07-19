@@ -13,18 +13,21 @@ namespace BlogWebsite.DAL
 
         public void Delete(T t)
         {
+            //using var _context = new Context();
             _context.Remove(t);
             _context.SaveChanges();
         }
 
         public List<T> GetAllList()
         {
+            // using var _context = new Context();
             return _context.Set<T>().ToList();
         }
 
         public T GetById(int id)
         {
             // return  _context.Set<T>().Find(id);
+            //using var _context = new Context();
             var getId = _context.Set<T>().Find(id);
             if (getId == null)
             {
@@ -37,12 +40,14 @@ namespace BlogWebsite.DAL
 
         public void Insert(T t)
         {
+            //using var _context = new Context();
             _context.Add(t);
             _context.SaveChanges();
         }
 
         public void Update(T t)
         {
+            //using var _context = new Context();
             _context.Update(t);
             _context.SaveChanges();
         }

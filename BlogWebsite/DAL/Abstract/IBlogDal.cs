@@ -12,6 +12,8 @@ namespace BlogWebsite.DAL.Abstract
         // void DeleteBlog(Blog blog);
         // void UpdateBlog(Blog blog);
         // Blog GetById(int id);
+
+        List<Blog> GetBlogListWithCategory();
     }
 
 }
