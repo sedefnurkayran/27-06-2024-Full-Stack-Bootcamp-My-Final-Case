@@ -7,6 +7,11 @@ namespace BlogWebsite.DAL.EntityFramework
 
     public class EfBlogRepository : GenericRepository<Blog>, IBlogDal
     {
+
+        public EfBlogRepository(DataContext context) : base(context)
+        {
+        }
+
         // private DataContext _context;
 
         // public EfBlogRepository(DataContext context)

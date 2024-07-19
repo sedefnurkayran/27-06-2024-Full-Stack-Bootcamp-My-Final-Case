@@ -1,4 +1,5 @@
 using BlogWebsite.BusinessLayer.Abstract;
+using BlogWebsite.DAL.Abstract;
 using BlogWebsite.DAL.EntityFramework;
 using BlogWebsite.Models;
 
@@ -6,37 +7,36 @@ namespace BlogWebsite.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        EfCategoryRepository efCategoryRepository;
+        ICategoryDal _categoryDal;
 
-        public CategoryManager()
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            efCategoryRepository = new EfCategoryRepository();
+            _categoryDal = categoryDal;
+
         }
         public void AddCategory(Category category)
         {
-            efCategoryRepository.Insert(category);
+            _categoryDal.Insert(category);
 
         }
-
-
         public void DeleteCategory(Category category)
         {
-            efCategoryRepository.Delete(category);
+            _categoryDal.Delete(category);
         }
 
         public Category GetById(int id)
         {
-            return efCategoryRepository.GetById(id);
+            return _categoryDal.GetById(id);
         }
 
         public List<Category> GetList()
         {
-            return efCategoryRepository.GetAllList();
+            return _categoryDal.GetAllList();
         }
 
         public void UpdateCategory(Category category)
         {
-            efCategoryRepository.Update(category);
+            _categoryDal.Update(category);
         }
     }
 }

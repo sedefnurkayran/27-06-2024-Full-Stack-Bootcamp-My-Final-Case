@@ -5,6 +5,11 @@ namespace BlogWebsite.DAL.EntityFramework
 {
     public class EfCategoryRepository : GenericRepository<Category>, ICategoryDal
     {
+
+        public EfCategoryRepository(DataContext context) : base(context)
+        {
+        }
+
         // private DataContext _context;
         // public EfCategoryRepository(DataContext context)
         // {
