@@ -65,7 +65,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-15),
                             Tags = context.Tags.Take(3).ToList(),
-                            BlogImage = "3.png",
+                            BlogImage = "~/img/3.png",
                             UserId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
@@ -77,7 +77,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-10),
                             Tags = context.Tags.Take(2).ToList(),
-                            BlogImage = "2.png",
+                            BlogImage = "~/img/2.png",
                             UserId = 2,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
@@ -89,7 +89,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-5),
                             Tags = context.Tags.Take(4).ToList(),
-                            BlogImage = "1.png",
+                            BlogImage = "~/img/1.png",
                             UserId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()

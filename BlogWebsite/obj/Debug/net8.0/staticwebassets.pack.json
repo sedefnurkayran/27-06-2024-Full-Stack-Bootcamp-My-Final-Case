@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\1.png",
+      "PackagePath": "staticwebassets\\img\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\2.png",
+      "PackagePath": "staticwebassets\\img\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\3.png",
+      "PackagePath": "staticwebassets\\img\\3.png"
+    },
+    {
       "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

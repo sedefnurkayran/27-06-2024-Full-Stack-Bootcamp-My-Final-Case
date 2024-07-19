@@ -1,17 +1,23 @@
+using BlogWebsite.BusinessLayer.Concrete;
+using BlogWebsite.DAL;
 using BlogWebsite.DAL.Abstract;
+using BlogWebsite.DAL.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Controllers;
 
 public class BlogController : Controller
 {
-    private IBlogDal _repository;
-    public BlogController(IBlogDal repository)
+    private readonly BlogManager bm;
+
+    public BlogController(DataContext context)
     {
-        _repository = repository;
+        bm = new BlogManager(new EfBlogRepository(context));
     }
-    // public IActionResult Index()
-    // {
-    //     //return View(_repository.blog.ToList());
-    // }
+
+    public IActionResult Index()
+    {
+        var values = bm.GetList();
+        return View(values);
+    }
 }
