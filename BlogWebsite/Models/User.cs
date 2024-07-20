@@ -18,6 +18,7 @@ namespace BlogWebsite.Models
         //         return this.UserName + " " + this.UserSurname;
         //     }
         // }
+        public string? UserAbout { get; set; }
         public string UserImage { get; set; } = string.Empty;
         public string? UserMail { get; set; } //= null!;
         public string? UserPassword { get; set; } //= null!;
