@@ -1,4 +1,5 @@
 using BlogApp.Data.Concrete.EfCore;
+using BlogWebsite.BusinessLayer.Concrete;
 using BlogWebsite.DAL;
 using BlogWebsite.DAL.Abstract;
 using BlogWebsite.DAL.EntityFramework;
@@ -25,6 +26,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 //bu daha kisasi.
 
 builder.Services.AddScoped<IBlogDal, EfBlogRepository>();
+
+builder.Services.AddScoped<ICommentDal, EfCommentRepository>();
+//builder.Services.AddScoped<CommentManager>();
 
 var app = builder.Build();
 
