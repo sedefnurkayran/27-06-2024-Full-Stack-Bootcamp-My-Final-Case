@@ -156,3 +156,7 @@ C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWeb
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.csproj.AssemblyReference.cache
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebs.AA08B81A.Up2Date
 C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.sourcelink.json
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\obj\Debug\net8.0\BlogWebsite.MvcApplicationPartsAssemblyInfo.cs
