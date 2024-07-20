@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace BlogWebsite.DAL.Abstract
 {
 
@@ -9,5 +11,7 @@ namespace BlogWebsite.DAL.Abstract
         void Update(T t);
         List<T> GetAllList();
         T GetById(int id);
+
+        List<T> GetAllList(Expression<Func<T, bool>> filter);
     }
 }

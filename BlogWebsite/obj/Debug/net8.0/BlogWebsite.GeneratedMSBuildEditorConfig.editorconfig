@@ -30,12 +30,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Blog/BlogReadAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nUmVhZEFsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Comment/CommentListInBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxDb21tZW50TGlzdEluQmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Comment/PartialAddComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxQYXJ0aWFsQWRkQ29tbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/Home/Index.cshtml]

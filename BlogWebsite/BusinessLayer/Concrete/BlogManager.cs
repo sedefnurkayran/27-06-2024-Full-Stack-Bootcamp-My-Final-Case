@@ -40,6 +40,11 @@ namespace BlogWebsite.BusinessLayer.Concrete
             return _blogDal.GetAllList();
         }
 
+        public List<Blog> GetBlogById(int id)
+        {
+
+            return _blogDal.GetAllList(x => x.BlogId == id);
+        }
         public void UpdateBlog(Blog blog)
         {
             throw new NotImplementedException();

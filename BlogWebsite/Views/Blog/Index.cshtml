@@ -36,12 +36,12 @@
 
 								</ul>
 								<h5 class="card-title">
-									<a href="single.html">@item.BlogTitle</a>
+									<a href="/Blog/BlogReadAll/@item.BlogId/">@item.BlogTitle</a>
 								</h5>
 								<p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,15).LastIndexOf(" "))... </p>
 
 								@*@(item.BlogContent?.Substring(0,100) ?? "No Content Available") ile Content alaninin null gelme durumu kontrol edilir. *@
-								<a href="/Blog/BlogDetails/@item.BlogId/" class="btn btn-primary read-m">Read More</a>
+								<a href="/Blog/BlogReadAll/@item.BlogId/" class="btn btn-primary read-m">Read More</a>
 							</div>
 						</div>
 						

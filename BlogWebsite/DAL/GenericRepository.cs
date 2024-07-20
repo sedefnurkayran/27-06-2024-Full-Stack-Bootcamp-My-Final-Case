@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using BlogWebsite.DAL.Abstract;
 
 namespace BlogWebsite.DAL
@@ -43,6 +44,11 @@ namespace BlogWebsite.DAL
             //using var _context = new Context();
             _context.Add(t);
             _context.SaveChanges();
+        }
+
+        public List<T> GetAllList(Expression<Func<T, bool>> filter)
+        {
+            return _context.Set<T>().Where(filter).ToList();
         }
 
         public void Update(T t)

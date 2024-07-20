@@ -20,4 +20,10 @@ public class BlogController : Controller
         var values = bm.GetBlogListWithCategory();
         return View(values);
     }
+
+    public IActionResult BlogReadAll(int id)
+    {
+        var values = bm.GetBlogById(id);
+        return View(values);
+    }
 }
