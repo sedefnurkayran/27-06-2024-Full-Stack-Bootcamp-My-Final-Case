@@ -19,27 +19,27 @@
 						<div class="form-row">
 								<div class="col-md-6 mb-3">
 										<label for="validationCustom01">Name and Surname</label>
-@Html.TextBoxFor(x=>x.UserName)
-@Html.ValidationMessageFor(x=>x.UserName)
+@Html.TextBoxFor(x=>x.UserName , new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.UserName, "" ,new {@class="text-danger"})  
 									@* <input type="text" class="form-control" id="validationDefault01" name="UserName" placeholder="" required=""> *@
 								</div>
 								<div class="col-md-6 mb-3">
 										<label for="validationCustom02">Email</label>
-                                        @Html.TextBoxFor(x=>x.UserMail)
-@Html.ValidationMessageFor(x=>x.UserMail)
+                                        @Html.TextBoxFor(x=>x.UserMail, new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.UserMail, "" ,new {@class="text-danger"})
 									@* <input type="mail" class="form-control" id="validationDefault02" name="UserMail" placeholder="" required=""> *@
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 										<label for="exampleInputPassword1 mb-2">Password</label>
-                                        @Html.TextBoxFor(x=>x.UserPassword)
-@Html.ValidationMessageFor(x=>x.UserPassword)
+                                        @Html.TextBoxFor(x=>x.UserPassword, new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.UserPassword, "" ,new {@class="text-danger"})
 									@* <input type="password" class="form-control" id="password1" name="UserPassword" placeholder="" required=""> *@
 								</div>
 								<div class="form-group col-md-6">
 										<label for="exampleInputPassword2 mb-2">Image Path</label>
-                                        @Html.TextBoxFor(x=>x.UserImage)
+                                        @Html.TextBoxFor(x=>x.UserImage, new {@class="form-control"})
 @Html.ValidationMessageFor(x=>x.UserImage)
 										@* <input type="text" class="form-control" id="password2" name="UserImage"  placeholder="" required=""> *@
 									</div>
@@ -58,7 +58,7 @@
         <script>
             $('#btn1').click(function() {
 
-                swal("Bilgi ve haber e-postalari gönderilecektir.");
+                swal("Site Kabul Sartlari", "Bilgi ve haber e-postalari gönderilecektir.");
             });
         </script>
 	</section>
