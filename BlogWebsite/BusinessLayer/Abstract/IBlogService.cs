@@ -10,7 +10,9 @@ namespace BlogWebsite.BusinessLayer.Abstract
         List<Blog> GetList();
         Blog GetById(int id);
 
-        List<Blog> GetBlogListWithCategory();
+        List<Blog> GetBlogListWithCategory(); //Kategorilere gore bloglari listeleme
+
+        List<Blog> GetBlogListOfWriter(int id); //Yazarin son 3 postu.
 
 
     }
