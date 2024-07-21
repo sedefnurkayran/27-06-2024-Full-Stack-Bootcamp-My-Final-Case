@@ -3,6 +3,7 @@ using System;
 using BlogWebsite.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogWebsite.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240721162152_UserNameCannotBeNullinUserComment")]
+    partial class UserNameCannotBeNullinUserComment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.6.24327.4");
@@ -150,9 +153,13 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CommentTitle")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CommentUserName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CommentUserSurname")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
@@ -223,6 +230,7 @@ namespace BlogWebsite.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserImage")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserMail")
@@ -240,21 +248,6 @@ namespace BlogWebsite.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("users");
-                });
-
-            modelBuilder.Entity("BlogWebsite.Models.UserComment", b =>
-                {
-                    b.Property<int>("UserCommentId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("UserCommentId");
-
-                    b.ToTable("userComments");
                 });
 
             modelBuilder.Entity("BlogTag", b =>

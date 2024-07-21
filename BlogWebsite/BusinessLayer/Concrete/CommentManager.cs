@@ -1,6 +1,7 @@
 using BlogWebsite.BusinessLayer.Abstract;
 using BlogWebsite.DAL.Abstract;
 using BlogWebsite.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BlogWebsite.BusinessLayer.Concrete
 {
@@ -16,7 +17,7 @@ namespace BlogWebsite.BusinessLayer.Concrete
         }
         public void AddComment(Comment comment)
         {
-            throw new NotImplementedException();
+            _commentDal.Insert(comment);
         }
 
         public List<Comment> GetList(int id)

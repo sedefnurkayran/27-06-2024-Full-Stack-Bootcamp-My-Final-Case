@@ -106,7 +106,7 @@ namespace BlogApp.Data.Concrete.EfCore
 
 
                     context.comments.AddRange(
-                        new Comment { BlogId = 1, CommentUserName = "User1", CommentCreateDate = DateTime.Now, CommentStatus = true, CommentTitle = "Comment1", CommentUserSurname = "Surname1", UserId = 1 }
+                        new Comment { BlogId = 1, CommentUserName = "User1", CommentCreateDate = DateTime.Now, CommentStatus = true, CommentTitle = "Comment1", UserId = 1 }
 
                         // new Comment { CommentTitle = "harika", BlogId = 1 },
                         // new Comment { CommentTitle = "cok güzel", BlogId = 1 },

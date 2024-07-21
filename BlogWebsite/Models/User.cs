@@ -19,7 +19,7 @@ namespace BlogWebsite.Models
         //     }
         // }
         public string? UserAbout { get; set; }
-        public string UserImage { get; set; } = string.Empty;
+        public string? UserImage { get; set; }
         public string? UserMail { get; set; } //= null!;
         public string? UserPassword { get; set; } //= null!;
         public bool UserStatus { get; set; }

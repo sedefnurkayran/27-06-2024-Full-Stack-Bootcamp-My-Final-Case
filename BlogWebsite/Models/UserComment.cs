@@ -7,6 +7,6 @@ namespace BlogWebsite.Models
         [Key]
         public int UserCommentId { get; set; }
 
-        public string UserName { get; set; }
+        public string UserName { get; set; } = null!;
     }
 }
