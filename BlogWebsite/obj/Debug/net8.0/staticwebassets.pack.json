@@ -529,6 +529,58 @@
       "PackagePath": "staticwebassets\\web\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\weberror\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\css\\style.css",
+      "PackagePath": "staticwebassets\\weberror\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\weberror\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\images\\3814348.jpg",
+      "PackagePath": "staticwebassets\\weberror\\images\\3814348.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\images\\banner1.jpg",
+      "PackagePath": "staticwebassets\\weberror\\images\\banner1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\images\\errorpage.png",
+      "PackagePath": "staticwebassets\\weberror\\images\\errorpage.png"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\index.html",
+      "PackagePath": "staticwebassets\\weberror\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\weberror\\w3layouts-license.txt",
+      "PackagePath": "staticwebassets\\weberror\\w3layouts-license.txt"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlogWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

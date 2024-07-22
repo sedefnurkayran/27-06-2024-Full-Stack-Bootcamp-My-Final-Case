@@ -1,3 +1,4 @@
+using System.Security.Permissions;
 using BlogApp.Data.Concrete.EfCore;
 using BlogWebsite.BusinessLayer.Concrete;
 using BlogWebsite.DAL;
@@ -42,6 +43,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// app.UseStatusCodePages(); //for 404 Error Page
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?Code={0}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();  //web projesi sablonu kullansaydim bunu ekleyecektim. wwwroot icn.
