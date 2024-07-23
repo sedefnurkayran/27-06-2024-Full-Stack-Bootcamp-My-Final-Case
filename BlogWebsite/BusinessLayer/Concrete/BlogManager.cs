@@ -40,6 +40,11 @@ namespace BlogWebsite.BusinessLayer.Concrete
             return _blogDal.GetAllList();
         }
 
+        public List<Blog> GetLast3Blog()
+        {
+            return _blogDal.GetAllList().Take(3).ToList();
+        }
+
         public List<Blog> GetBlogById(int id)
         {
 

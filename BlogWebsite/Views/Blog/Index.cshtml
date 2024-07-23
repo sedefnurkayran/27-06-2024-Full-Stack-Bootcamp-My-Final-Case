@@ -40,7 +40,7 @@
 								</h5>
 								@* <p class="card-text mb-3">@item.BlogContent.Substring(0,item.BlogContent.Substring(0,15).LastIndexOf(" "))... </p> *@
 
-								<p class="card-text mb-3">@(item.BlogContent?.Substring(0, item.BlogContent.Substring(0, 15).LastIndexOf(" ")) ?? "No Content Available")... </p>
+								<p class="card-text mb-3">@(item.BlogContent?.Substring(0, item.BlogContent.Substring(0, 10).LastIndexOf(" ")) ?? "No Content Available")... </p>
 
 								@*@(item.BlogContent?.Substring(0,100) ?? "No Content Available") ile Content alaninin null gelme durumu kontrol edilir. *@
 								<a href="/Blog/BlogReadAll/@item.BlogId/" class="btn btn-primary read-m rounded">Read More</a>

@@ -2,10 +2,11 @@ using BlogWebsite.BusinessLayer.Concrete;
 using BlogWebsite.DAL;
 using BlogWebsite.DAL.Abstract;
 using BlogWebsite.DAL.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Controllers;
-
+[AllowAnonymous]
 public class BlogController : Controller
 {
     private readonly BlogManager bm;
