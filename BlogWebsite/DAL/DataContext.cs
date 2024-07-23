@@ -17,7 +17,7 @@ namespace BlogWebsite.DAL
         public DbSet<Contact> contacts => Set<Contact>();
         public DbSet<Tag> Tags => Set<Tag>();
 
-        public DbSet<User> users => Set<User>();
+        public DbSet<Writer> writers => Set<Writer>();
         public DbSet<NewsLetter> newsLetters => Set<NewsLetter>();
         public DbSet<UserComment> userComments => Set<UserComment>();
         //public DbSet<UserType> userTypes => Set<UserType>();

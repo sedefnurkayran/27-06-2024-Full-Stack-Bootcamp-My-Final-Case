@@ -18,8 +18,8 @@ namespace BlogWebsite.Models
         public int BlogId { get; set; }
 
         public Blog Blog { get; set; } = null!;
-        public int UserId { get; set; }
-        public User User { get; set; } = null!;
+        public int WriterId { get; set; }
+        public Writer Writer { get; set; } = null!;
 
     }
 }

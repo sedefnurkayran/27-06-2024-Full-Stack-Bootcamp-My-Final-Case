@@ -1,4 +1,4 @@
-@model BlogWebsite.Models.User
+@model BlogWebsite.Models.Writer
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
@@ -19,28 +19,28 @@
 						<div class="form-row">
 								<div class="col-md-6 mb-3">
 										<label for="validationCustom01">Name and Surname</label>
-@Html.TextBoxFor(x=>x.UserName , new {@class="form-control"})
-@Html.ValidationMessageFor(x=>x.UserName, "" ,new {@class="text-danger"})  
+@Html.TextBoxFor(x=>x.WriterName , new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.WriterName, "" ,new {@class="text-danger"})  
 									@* <input type="text" class="form-control" id="validationDefault01" name="UserName" placeholder="" required=""> *@
 								</div>
 								<div class="col-md-6 mb-3">
 										<label for="validationCustom02">Email</label>
-                                        @Html.TextBoxFor(x=>x.UserMail, new {@class="form-control"})
-@Html.ValidationMessageFor(x=>x.UserMail, "" ,new {@class="text-danger"})
+                                        @Html.TextBoxFor(x=>x.WriterMail, new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.WriterMail, "" ,new {@class="text-danger"})
 									@* <input type="mail" class="form-control" id="validationDefault02" name="UserMail" placeholder="" required=""> *@
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 										<label for="exampleInputPassword1 mb-2">Password</label>
-                                        @Html.TextBoxFor(x=>x.UserPassword, new {@class="form-control"})
-@Html.ValidationMessageFor(x=>x.UserPassword, "" ,new {@class="text-danger"})
+                                        @Html.TextBoxFor(x=>x.WriterPassword, new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.WriterPassword, "" ,new {@class="text-danger"})
 									@* <input type="password" class="form-control" id="password1" name="UserPassword" placeholder="" required=""> *@
 								</div>
 								<div class="form-group col-md-6">
 										<label for="exampleInputPassword2 mb-2">Image Path</label>
-                                        @Html.TextBoxFor(x=>x.UserImage, new {@class="form-control"})
-@Html.ValidationMessageFor(x=>x.UserImage)
+                                        @Html.TextBoxFor(x=>x.WriterImage, new {@class="form-control"})
+@Html.ValidationMessageFor(x=>x.WriterImage)
 										@* <input type="text" class="form-control" id="password2" name="UserImage"  placeholder="" required=""> *@
 									</div>
 								

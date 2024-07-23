@@ -52,7 +52,7 @@ namespace BlogWebsite.BusinessLayer.Concrete
 
         public List<Blog> GetBlogListOfWriter(int id)
         {
-            return _blogDal.GetAllList(x => x.UserId == id);
+            return _blogDal.GetAllList(x => x.WriterId == id);
         }
     }
 }

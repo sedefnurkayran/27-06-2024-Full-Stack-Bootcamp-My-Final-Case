@@ -8,7 +8,7 @@ namespace BlogWebsite.Controllers;
 
 public class AboutController : Controller
 {
-    //AboutManager abm = new AboutManager(new EfAboutRepository());MY
+    // AboutManager abm = new AboutManager(new EfAboutRepository());  //MY
 
     private readonly AboutManager abm;
 

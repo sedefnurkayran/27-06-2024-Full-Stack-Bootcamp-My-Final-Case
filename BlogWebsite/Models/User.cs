@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 namespace BlogWebsite.Models
 {
 
-    public class User
+    public class Writer
     {
         [Key]
 
-        public int UserId { get; set; }
-        public string? UserName { get; set; } //= null!;
+        public int WriterId { get; set; }
+        public string? WriterName { get; set; } //= null!;
         //public string? UserSurname { get; set; }// = null!;
 
         // public string NameSurname
@@ -18,11 +18,11 @@ namespace BlogWebsite.Models
         //         return this.UserName + " " + this.UserSurname;
         //     }
         // }
-        public string? UserAbout { get; set; }
-        public string? UserImage { get; set; }
-        public string? UserMail { get; set; } //= null!;
-        public string? UserPassword { get; set; } //= null!;
-        public bool UserStatus { get; set; }
+        public string? WriterAbout { get; set; }
+        public string? WriterImage { get; set; }
+        public string? WriterMail { get; set; } //= null!;
+        public string? WriterPassword { get; set; } //= null!;
+        public bool WriterStatus { get; set; }
 
         //RELATIONSHIPS       
         public List<Blog> Blogs { get; set; } = new List<Blog>();

@@ -25,8 +25,8 @@ namespace BlogWebsite.Models
 
         public List<Tag> Tags { get; set; } = new List<Tag>();
 
-        public int UserId { get; set; }
-        public User User { get; set; } = null!;
+        public int WriterId { get; set; }
+        public Writer Writer { get; set; } = null!;
 
     }
 }

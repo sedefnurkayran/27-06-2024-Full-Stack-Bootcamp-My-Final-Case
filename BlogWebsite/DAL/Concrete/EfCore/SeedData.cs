@@ -3,7 +3,7 @@ using BlogWebsite.DAL;
 using BlogWebsite.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlogApp.Data.Concrete.EfCore
+namespace BlogWebsite.DAL.Concrete.EfCore
 {
 
     public static class SeedData
@@ -46,11 +46,11 @@ namespace BlogApp.Data.Concrete.EfCore
                     );
                     context.SaveChanges();
                 }
-                if (!context.users.Any())
+                if (!context.writers.Any())
                 {
-                    context.users.AddRange(
-                       new User { UserName = "ahmetkaya", UserMail = "ahmetkaya@example.com", UserPassword = "password", UserStatus = true },
-                        new User { UserName = "sinankarabulut", UserMail = "sinankarabulut@example.com", UserPassword = "sdfserfd", UserStatus = true }
+                    context.writers.AddRange(
+                       new Writer { WriterName = "ahmetkaya", WriterMail = "ahmetkaya@example.com", WriterPassword = "password", WriterStatus = true },
+                        new Writer { WriterName = "sinankarabulut", WriterMail = "sinankarabulut@example.com", WriterPassword = "sdfserfd", WriterStatus = true }
 
                     );
                     context.SaveChanges();
@@ -66,7 +66,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogCreateDate = DateTime.Now.AddDays(-15),
                             Tags = context.Tags.Take(3).ToList(),
                             BlogImage = "~/img/3.png",
-                            UserId = 1,
+                            WriterId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
                         },
@@ -78,7 +78,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogCreateDate = DateTime.Now.AddDays(-10),
                             Tags = context.Tags.Take(2).ToList(),
                             BlogImage = "~/img/2.png",
-                            UserId = 2,
+                            WriterId = 2,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
                         },
@@ -90,7 +90,7 @@ namespace BlogApp.Data.Concrete.EfCore
                             BlogCreateDate = DateTime.Now.AddDays(-5),
                             Tags = context.Tags.Take(4).ToList(),
                             BlogImage = "~/img/1.png",
-                            UserId = 1,
+                            WriterId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
                         }
@@ -106,7 +106,7 @@ namespace BlogApp.Data.Concrete.EfCore
 
 
                     context.comments.AddRange(
-                        new Comment { BlogId = 1, CommentUserName = "User1", CommentCreateDate = DateTime.Now, CommentStatus = true, CommentTitle = "Comment1", UserId = 1 }
+                        new Comment { BlogId = 1, CommentUserName = "User1", CommentCreateDate = DateTime.Now, CommentStatus = true, CommentTitle = "Comment1", WriterId = 1 }
 
                         // new Comment { CommentTitle = "harika", BlogId = 1 },
                         // new Comment { CommentTitle = "cok güzel", BlogId = 1 },

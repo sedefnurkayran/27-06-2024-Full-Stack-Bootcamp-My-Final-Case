@@ -1,5 +1,6 @@
 
 using BlogWebsite.DAL.Abstract;
+using BlogWebsite.DAL.Concrete.EfCore;
 using BlogWebsite.Models;
 
 namespace BlogWebsite.DAL.EntityFramework
@@ -10,5 +11,13 @@ namespace BlogWebsite.DAL.EntityFramework
         public EfAboutRepository(DataContext context) : base(context)
         {
         }
+
+        //  private DataContext _context;
+
+        // public EfAboutRepository(DataContext context)
+        // {
+        //     _context = context;
+        // }
+
     }
 }

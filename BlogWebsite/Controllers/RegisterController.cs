@@ -3,6 +3,7 @@ using BlogWebsite.BusinessLayer.ValidationRules;
 using BlogWebsite.DAL;
 using BlogWebsite.DAL.EntityFramework;
 using BlogWebsite.Models;
+using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,16 +27,16 @@ public class RegisterController : Controller
     }
 
     [HttpPost]
-    public IActionResult Index(User user)
+    public IActionResult Index(Writer writer)
     {
         WriterValidator wv = new WriterValidator();
-        ValidationResult result = wv.Validate(user);
+        ValidationResult result = wv.Validate(writer);
 
         if (result.IsValid)
         {
-            user.UserStatus = true;
-            user.UserAbout = "Deneme";
-            rm.AddWriter(user);
+            writer.WriterStatus = true;
+            writer.WriterAbout = "Deneme";
+            rm.AddWriter(writer);
             return RedirectToAction("Index", "Blog");
         }
         else

@@ -15,9 +15,11 @@ namespace BlogWebsite.BusinessLayer.Concrete
 
         }
 
-        public void AddWriter(User user)
+        public void AddWriter(Writer writer)
         {
-            _writerDal.Insert(user);
+            _writerDal.Insert(writer);
         }
+
+
     }
 }
