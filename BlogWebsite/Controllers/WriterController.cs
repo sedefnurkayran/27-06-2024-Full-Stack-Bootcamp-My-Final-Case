@@ -12,7 +12,6 @@ public class WriterController : Controller
     //     bm = new BlogManager(new EfWriterRepository(context));
     // }
     //[Authorize]
-    [AllowAnonymous]
     public IActionResult Index()
     {
         //  var values = bm.GetBlogListWithCategory();

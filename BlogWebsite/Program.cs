@@ -55,8 +55,16 @@ builder.Services.AddScoped<IWriterDal, EfWriterRepository>();
 // }
 
 //COOKIE ILE AUTHENTICATION 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-builder.Services.AddSession();
+builder.Services.AddMvc();
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+x =>
+{
+    x.LoginPath = "/Login/Index";
+}
+);
+//builder.Services.AddAuthorization();
+//builder.Services.AddSession();
 
 
 var app = builder.Build();
@@ -78,8 +86,9 @@ app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?Code={0}"); //Sd
 app.UseHttpsRedirection();
 app.UseStaticFiles();  //web projesi sablonu kullansaydim bunu ekleyecektim. wwwroot icn.
 
-app.UseSession(); //sessionu kullan - sd
 app.UseRouting();
+
+//app.UseSession(); //sessionu kullan - sd
 
 app.UseAuthentication(); //Sd
 
