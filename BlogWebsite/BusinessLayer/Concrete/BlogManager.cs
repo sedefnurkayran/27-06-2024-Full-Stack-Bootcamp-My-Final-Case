@@ -62,7 +62,7 @@ namespace BlogWebsite.BusinessLayer.Concrete
 
         public void TAdd(Blog t)
         {
-            throw new NotImplementedException();
+            _blogDal.Insert(t);
         }
 
         public void TDelete(Blog t)
@@ -75,19 +75,6 @@ namespace BlogWebsite.BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void AddBlog(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void DeleteBlog(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateBlog(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

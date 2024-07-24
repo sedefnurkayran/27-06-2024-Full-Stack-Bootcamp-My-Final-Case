@@ -1,0 +1,35 @@
+@model BlogWebsite.Models.Blog
+
+@{
+    ViewData ["Title"] = "AddBlog";
+    Layout="~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+	@using(Html.BeginForm("AddBlog","Blog",FormMethod.Post))
+    {
+        @Html.Label("Blog Title")
+        @Html.TextBoxFor(x=>x.BlogTitle, new {@class = "form-control"})
+        @Html.ValidationMessageFor(x=>x.BlogTitle)
+
+        <br/>
+           @Html.Label("Blog Image")
+        @Html.TextBoxFor(x=>x.BlogImage, new {@class = "form-control"})
+        @Html.ValidationMessageFor(x=>x.BlogImage)
+
+        <br/>
+           @Html.Label("Blog ThumnailImage")
+        @Html.TextBoxFor(x=>x.BlogThumbnailImage, new {@class = "form-control"})
+        <br/>
+
+              @Html.Label("Category")
+        @Html.TextBoxFor(x=>x.CategoryId, new {@class = "form-control"})
+        <br/>
+
+            @Html.Label("Blog Content")
+        @Html.TextAreaFor(x=>x.BlogContent,3,10, new {@class = "form-control"})
+        @Html.ValidationMessageFor(x=>x.BlogContent)
+          <br/>
+        <button class="btn btn-primary">Save Blog</button>
+
+    }
