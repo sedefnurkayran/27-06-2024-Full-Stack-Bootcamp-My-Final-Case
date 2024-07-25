@@ -1,0 +1,12 @@
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\bin\Debug\net8.0\CoreLayer.deps.json
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\bin\Debug\net8.0\CoreLayer.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\bin\Debug\net8.0\CoreLayer.pdb
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.AssemblyInfo.cs
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.sourcelink.json
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\refint\CoreLayer.dll
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\CoreLayer.pdb
+C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\CoreLayer\obj\Debug\net8.0\ref\CoreLayer.dll
