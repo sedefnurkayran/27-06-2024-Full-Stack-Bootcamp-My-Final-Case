@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.ViewComponents.Comment
@@ -13,7 +13,7 @@ namespace BlogApp.ViewComponents.Comment
 
         private readonly CommentManager cm;
 
-        public CommentListInBlog(DataContext context)
+        public CommentListInBlog(Context context)
         {
             cm = new CommentManager(new EfCommentRepository(context));
         }

@@ -1,5 +1,4 @@
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
 using BlogWebsite.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,15 +7,17 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 
 namespace BlogWebsite.Controllers
 {
 
     public class LoginController : Controller
     {
-        private readonly DataContext _context;
+        private readonly Context _context;
 
-        public LoginController(DataContext context)
+        public LoginController(Context context)
         {
             _context = context;
         }

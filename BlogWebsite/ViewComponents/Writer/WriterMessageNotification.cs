@@ -1,4 +1,3 @@
-using BlogWebsite.DAL;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.ViewComponents.Writer

@@ -1,22 +1,25 @@
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 public class WriterController : Controller
 {
-    // private readonly BlogManager bm;
+    private readonly WriterManager wm;
 
-    // public WriterController(DataContext context)
-    // {
-    //     bm = new BlogManager(new EfWriterRepository(context));
-    // }
-    //[Authorize]
-    public IActionResult Index()
+    public WriterController(Context context)
     {
-        //  var values = bm.GetBlogListWithCategory();
-        return View();
+        wm = new WriterManager(new EfWriterRepository(context));
     }
+
+    // [Authorize]
+    // public IActionResult Index()
+    // {
+    //     var values = bm.GetBlogListWithCategory();
+    //     return View();
+    // }
 
 
     public IActionResult WriterProfile()

@@ -1,7 +1,8 @@
-using BlogWebsite.Models;
+
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BlogApp.ViewComponents
+namespace BlogWebsite.ViewComponents
 {
 
     public class CommentList : ViewComponent

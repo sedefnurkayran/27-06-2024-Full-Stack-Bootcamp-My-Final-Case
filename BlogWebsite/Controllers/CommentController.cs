@@ -1,7 +1,9 @@
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
 using BlogWebsite.Models;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Controllers
@@ -12,7 +14,7 @@ namespace BlogWebsite.Controllers
 
         private readonly CommentManager cm;
 
-        public CommentController(DataContext context)
+        public CommentController(Context context)
         {
             cm = new CommentManager(new EfCommentRepository(context));
         }

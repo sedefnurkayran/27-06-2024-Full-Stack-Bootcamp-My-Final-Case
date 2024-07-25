@@ -1,7 +1,8 @@
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
 using BlogWebsite.Models;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Controllers
@@ -9,11 +10,11 @@ namespace BlogWebsite.Controllers
 
     public class CategoryController : Controller
     {
-        //CategoryManager cm = new CategoryManager(new EfCategoryRepository()); //MY
+        // CategoryManager cm = new CategoryManager(new EfCategoryRepository()); //MY
 
         private readonly CategoryManager cm;
 
-        public CategoryController(DataContext context)
+        public CategoryController(Context context)
         {
             cm = new CategoryManager(new EfCategoryRepository(context));
         }

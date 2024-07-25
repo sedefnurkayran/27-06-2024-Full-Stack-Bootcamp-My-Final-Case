@@ -1,8 +1,10 @@
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.BusinessLayer.ValidationRules;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
 using BlogWebsite.Models;
+using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +16,7 @@ public class RegisterController : Controller
 
     private readonly WriterManager rm;
 
-    public RegisterController(DataContext context)
+    public RegisterController(Context context)
     {
         rm = new WriterManager(new EfWriterRepository(context));
     }

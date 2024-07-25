@@ -1,6 +1,7 @@
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.EntityFramework;
+
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.ViewComponents.Comment
@@ -8,11 +9,11 @@ namespace BlogApp.ViewComponents.Comment
 
     public class CategoryList : ViewComponent
     {
-        // CommentManager cm = new CommentManager(new EfCommentRepository()); MY 
+        //CategoryManager cm = new CategoryManager(new EfCategoryRepository()); //MY 
 
         private readonly CategoryManager cm;
 
-        public CategoryList(DataContext context)
+        public CategoryList(Context context)
         {
             cm = new CategoryManager(new EfCategoryRepository(context));
         }

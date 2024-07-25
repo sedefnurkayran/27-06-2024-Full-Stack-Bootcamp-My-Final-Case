@@ -1,10 +1,7 @@
 using System.Security.Permissions;
-using BlogWebsite.BusinessLayer.Abstract;
-using BlogWebsite.BusinessLayer.Concrete;
-using BlogWebsite.DAL;
-using BlogWebsite.DAL.Abstract;
-using BlogWebsite.DAL.Concrete.EfCore;
-using BlogWebsite.DAL.EntityFramework;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -16,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();   //Controllerlari Viewslerle birlikte kullansin.
 
 //DbConnection
-builder.Services.AddDbContext<DataContext>(options =>
+builder.Services.AddDbContext<Context>(options =>
 {
     var config = builder.Configuration;
     var connectionString = config.GetConnectionString("database");
