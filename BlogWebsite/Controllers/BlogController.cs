@@ -10,8 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace BlogWebsite.Controllers;
 [AllowAnonymous]
 public class BlogController : Controller
@@ -66,7 +64,7 @@ public class BlogController : Controller
 
         // DbContextOptions oluşturma
         var optionsBuilder = new DbContextOptionsBuilder<Context>();
-        optionsBuilder.UseSqlite("Data Source=database.db"); // Connection string'i burada sağlayın
+        optionsBuilder.UseSqlite("Data Source=myBlogWebsiteDb.db"); // Connection string'i burada sağlayın
 
         using (var context = new Context(optionsBuilder.Options))
         {

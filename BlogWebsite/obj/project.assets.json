@@ -3714,8 +3714,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj"
             },
             "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\DataAccessLayer\\DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\DataAccessLayer\\DataAccessLayer.csproj"

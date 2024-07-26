@@ -16,9 +16,13 @@ builder.Services.AddControllersWithViews();   //Controllerlari Viewslerle birlik
 //DbConnection
 builder.Services.AddDbContext<Context>(options =>
 {
+    //   var config = builder.Configuration;
+    // var connectionString = config.GetConnectionString("database");
+    // options.UseSqlite(connectionString);
+
     var config = builder.Configuration;
     var connectionString = config.GetConnectionString("database");
-    options.UseSqlite(connectionString);//  b => b.MigrationsAssembly("DataAccessLayer")//YENI EKLEDIM.
+    options.UseSqlite(connectionString, b => b.MigrationsAssembly("DataAccessLayer"));//YENI EKLEDIM.
 
 });
 
