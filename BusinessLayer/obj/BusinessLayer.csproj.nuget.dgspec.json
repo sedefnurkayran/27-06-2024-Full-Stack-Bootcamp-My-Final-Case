@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {}
+    "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {
+    "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Sedef\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\obj\\",
+        "outputPath": "c:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sedef\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -17,13 +17,13 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlogWebsite
 build_property.RootNamespace = BlogWebsite
-build_property.ProjectDir = C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\
+build_property.ProjectDir = c:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite
+build_property.MSBuildProjectDirectory = c:\Users\Sedef\source\repos\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\BlogWebsite
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/Sedef/source/repos/27-06-2024-Full-Stack-Bootcamp-My-Final-Case/BlogWebsite/Views/About/Index.cshtml]
