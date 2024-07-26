@@ -18,11 +18,20 @@
     </tr>
     @foreach(var item in Model){
         <tr>
-            <td>@item.BlogId</td>
+            <th>@item.BlogId</th>
             <td>@item.BlogTitle</td>
-            <td>@item.BlogCreateDate</td>
-            <td>@item.CategoryId</td>
-            <td>@item.BlogStatus</td>
+            <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.Category.CategoryName</td>
+            @* @if (@item.BlogStatus == true)
+            {
+                <td>Aktif</td>
+            }
+            else{
+                <td>Pasif</td>
+            } *@
+            <td>@(item.BlogStatus ? "Aktif" : "Pasif")</td>
+
+
             <td><a href="#" class="btn btn-warning">Update</a></td>
             <td><a href="#" class="btn btn-danger">Sil</a></td>
         </tr>

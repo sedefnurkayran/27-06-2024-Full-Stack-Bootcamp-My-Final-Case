@@ -63,36 +63,36 @@ namespace DataAccessLayer.Concrete
                     context.blogs.AddRange(
                         new Blog
                         {
-                            BlogTitle = "Asp.net Core",
-                            BlogContent = "asp.net core güzel bir kütüphanedir.",
+                            BlogTitle = "Jordan",
+                            BlogContent = "'Rose-red city' world wonder: Petra.",
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-15),
                             Tags = context.Tags.Take(3).ToList(),
-                            BlogImage = "~/img/3.png",
+                            BlogImage = "/img/petra1.jpg",
                             WriterId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()
                         },
                         new Blog
                         {
-                            BlogTitle = "Unity ile oyun geliştirme",
-                            BlogContent = "Unity editörü ile oyunlar geliştirebilirsiniz.",
+                            BlogTitle = "Bosnia and Herzegovina",
+                            BlogContent = "Natural Wonder Vrelo Bosnia National Park.",
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-10),
                             Tags = context.Tags.Take(2).ToList(),
-                            BlogImage = "~/img/2.png",
+                            BlogImage = "/img/bosna.jpg",
                             WriterId = 2,
-                            CategoryId = 1,
+                            CategoryId = 3,
                             Comments = context.comments.Take(1).ToList()
                         },
                         new Blog
                         {
-                            BlogTitle = "Full Stack Developer Olmak",
-                            BlogContent = "Full Stack Developer Olmak Güzeldir.",
+                            BlogTitle = "Wadi Rum",
+                            BlogContent = "This Is Not Mars, This Is Wadi Rum!",
                             BlogStatus = true,
                             BlogCreateDate = DateTime.Now.AddDays(-5),
                             Tags = context.Tags.Take(4).ToList(),
-                            BlogImage = "~/img/1.png",
+                            BlogImage = "/img/wadirum2.jpg",
                             WriterId = 1,
                             CategoryId = 1,
                             Comments = context.comments.Take(1).ToList()

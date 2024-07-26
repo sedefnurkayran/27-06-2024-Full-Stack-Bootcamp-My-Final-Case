@@ -38,7 +38,8 @@ public class BlogController : Controller
     //YAZARLARA GORE BLOG GETIRME
     public IActionResult BlogListByWriter()
     {
-        var values = bm.GetBlogListOfWriter(1);
+        var values = bm.GetBlogListWithCategoryByWriterBm(1);
+        // ViewBag.Status = bm.BlogStatus;
 
         return View(values);
 

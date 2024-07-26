@@ -13,16 +13,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\1.png",
-      "PackagePath": "staticwebassets\\img\\1.png"
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\bosna.jpg",
+      "PackagePath": "staticwebassets\\img\\bosna.jpg"
     },
     {
-      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\2.png",
-      "PackagePath": "staticwebassets\\img\\2.png"
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\bosna.png",
+      "PackagePath": "staticwebassets\\img\\bosna.png"
     },
     {
-      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\3.png",
-      "PackagePath": "staticwebassets\\img\\3.png"
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\misir.jpg",
+      "PackagePath": "staticwebassets\\img\\misir.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\petra1.jpg",
+      "PackagePath": "staticwebassets\\img\\petra1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\petra2.jpg",
+      "PackagePath": "staticwebassets\\img\\petra2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\wadirum1.jpg",
+      "PackagePath": "staticwebassets\\img\\wadirum1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\wadirum2.jpg",
+      "PackagePath": "staticwebassets\\img\\wadirum2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\img\\wadirum3.jpeg",
+      "PackagePath": "staticwebassets\\img\\wadirum3.jpeg"
     },
     {
       "Id": "C:\\Users\\Sedef\\source\\repos\\27-06-2024-Full-Stack-Bootcamp-My-Final-Case\\BlogWebsite\\wwwroot\\js\\site.js",

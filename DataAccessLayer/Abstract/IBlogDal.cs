@@ -14,5 +14,8 @@ public interface IBlogDal : IGenericDal<Blog>
     // Blog GetById(int id);
 
     List<Blog> GetBlogListWithCategory();
+
+
+    List<Blog> GetBlogListWithCategoryByWriter(int id); //Yazara gore kategorileri getir
 }
 
