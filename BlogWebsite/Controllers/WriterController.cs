@@ -14,12 +14,13 @@ public class WriterController : Controller
         wm = new WriterManager(new EfWriterRepository(context));
     }
 
-    // [Authorize]
-    // public IActionResult Index()
-    // {
-    //     var values = bm.GetBlogListWithCategory();
-    //     return View();
-    // }
+
+
+    [Authorize]
+    public IActionResult Index()
+    {
+        return View();
+    }
 
 
     public IActionResult WriterProfile()

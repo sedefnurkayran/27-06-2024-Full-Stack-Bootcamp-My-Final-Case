@@ -1,6 +1,7 @@
 using System.Security.Permissions;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using DataAccessLayer.Repositories;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -17,7 +18,8 @@ builder.Services.AddDbContext<Context>(options =>
 {
     var config = builder.Configuration;
     var connectionString = config.GetConnectionString("database");
-    options.UseSqlite(connectionString);
+    options.UseSqlite(connectionString);//  b => b.MigrationsAssembly("DataAccessLayer")//YENI EKLEDIM.
+
 });
 
 //Ya da 
@@ -33,9 +35,9 @@ builder.Services.AddScoped<ICommentDal, EfCommentRepository>();
 builder.Services.AddScoped<IConctactDal, EfContactRepository>();
 builder.Services.AddScoped<INewsLetterDal, EfNewsLetterRepository>();
 builder.Services.AddScoped<IWriterDal, EfWriterRepository>();
+// builder.Services.AddScoped<IGenericDal<T>, GenericRepository<T>>();
+// builder.Services.AddScoped<(typeof(IGenericDal<>), typeof(GenericRepository<>));
 
-// builder.Services.AddScoped<AboutManager>();
-// builder.Services.AddScoped<CommentManager>();
 
 //AUTH MY
 // public void ConfigureServices(IServiceCollection services)
@@ -52,14 +54,20 @@ builder.Services.AddScoped<IWriterDal, EfWriterRepository>();
 // }
 
 //COOKIE ILE AUTHENTICATION 
-builder.Services.AddMvc();
+//builder.Services.AddMvc();
+builder.Services.AddMvc(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+});
 //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
 x =>
 {
     x.LoginPath = "/Login/Index";
-}
-);
+});
 //builder.Services.AddAuthorization();
 //builder.Services.AddSession();
 

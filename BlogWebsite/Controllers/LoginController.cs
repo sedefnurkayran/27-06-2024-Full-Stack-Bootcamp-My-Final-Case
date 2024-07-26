@@ -1,5 +1,4 @@
 
-using BlogWebsite.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +21,6 @@ namespace BlogWebsite.Controllers
             _context = context;
         }
 
-
         [AllowAnonymous]
         public IActionResult Index()
         {
@@ -37,8 +35,8 @@ namespace BlogWebsite.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index(Writer writer)
         {
-            if (ModelState.IsValid)
-            {
+            
+           // Context c = new Context();
                 var dataValue = await _context.writers.FirstOrDefaultAsync(x => x.WriterMail == writer.WriterMail
                 && x.WriterPassword == writer.WriterPassword);
                 if (dataValue != null)
@@ -46,11 +44,6 @@ namespace BlogWebsite.Controllers
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, writer.WriterMail ?? "")
-
-                        // claims.Add(new Claim(ClaimTypes.NameIdentifier, dataValue.WriterId.ToString()));
-                        // claims.Add(new Claim(ClaimTypes.Name, dataValue.WriterName ?? ""));
-                        // claims.Add(new Claim(ClaimTypes.GivenName, dataValue.WriterName ?? ""));
-                        // claims.Add(new Claim(ClaimTypes.UserData, dataValue.WriterImage ?? ""));
 
                     };
 
@@ -60,30 +53,9 @@ namespace BlogWebsite.Controllers
                     await HttpContext.SignInAsync(principal);
                     return RedirectToAction("Index", "Writer");
 
-                    // if (dataValue.WriterMail == "info@ahmetkaya.com")
-                    // {
-                    //     claims.Add(new Claim(ClaimTypes.Role, "admin"));
-                    // }
-
-                    // var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                    // var autProperties = new AuthenticationProperties { IsPersistent = true };
-                    // await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-                    // await HttpContext.SignInAsync(
-                    //     CookieAuthenticationDefaults.AuthenticationScheme,
-                    //     new ClaimsPrincipal(claimsIdentity), autProperties
-                    // );
-                    // return RedirectToAction("Index", "Blog");
+                 
                 }
-                else
-                {
-
-                    ModelState.AddModelError("", "Kullanıcı adı veya parola hatalı");
-                    // return View();
-
-                }
-
-            }
+              
             return View(writer);
         }
     }
