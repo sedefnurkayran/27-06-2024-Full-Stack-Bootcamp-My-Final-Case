@@ -11,6 +11,8 @@ namespace DataAccessLayer.Concrete
     {
 
         public Context(DbContextOptions<Context> options) : base(options) { }
+
+        
         public DbSet<About> abouts => Set<About>();
         public DbSet<Blog> blogs => Set<Blog>();
         public DbSet<Category> categories => Set<Category>();
