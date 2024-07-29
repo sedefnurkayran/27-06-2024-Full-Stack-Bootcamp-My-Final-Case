@@ -46,43 +46,45 @@ public class BlogController : Controller
     }
 
     //SISTEME AUTHENTICE OLAN YAZAR BLOG EKLEYECEK
-    [HttpGet]
-    public IActionResult AddBlog()
-    {
-
-        //DROPDOWN ile kategori sectirme MY
-        // CategoryManager cm = new CategoryManager(new EfCategoryRepository());
+    // [HttpGet]
+    // public IActionResult AddBlog()
+    // {
 
 
-        // List<SelectListItem> categoryValues = (from x in cm.GetList()
-        //                                        select new SelectListItem
-        //                                        {
-        //                                            Text = x.CategoryName,
-        //                                            Value = x.CategoryId.ToString()
-        //                                        }).ToList();
-        // ViewBag.cv = categoryValues;
-        // return View();
-
-        // DbContextOptions oluşturma
-        var optionsBuilder = new DbContextOptionsBuilder<Context>();
-        optionsBuilder.UseSqlite("Data Source=myBlogWebsiteDb.db"); // Connection string'i burada sağlayın
-
-        using (var context = new Context(optionsBuilder.Options))
-        {
+    //     //DROPDOWN ile kategori sectirme MY
+    // CategoryManager cm = new CategoryManager(new EfCategoryRepository(context));
 
 
-            List<SelectListItem> categoryValues = (from x in context.categories.ToList()
-                                                   select new SelectListItem
-                                                   {
-                                                       Text = x.CategoryName,
-                                                       Value = x.CategoryId.ToString()
-                                                   }).ToList();
-            ViewBag.cv = categoryValues;
-            return View();
+    // List<SelectListItem> categoryValues = (from x in cm.GetList()
+    //                                        select new SelectListItem
+    //                                        {
+    //                                            Text = x.CategoryName,
+    //                                            Value = x.CategoryId.ToString()
+    //                                        }).ToList();
+    // ViewBag.cv = categoryValues;
+    // return View();
+
+    //     // DbContextOptions oluşturma
+    //     // var optionsBuilder = new DbContextOptionsBuilder<Context>();
+    //     // optionsBuilder.UseSqlite("Data Source=myBlogWebsiteDb.db"); // Connection string'i burada sağlayın
+
+    //     // using (var context = new Context(optionsBuilder.Options))
+    //     // {
+
+    //     //       //SeedData.SeedDatabase(context);
+    //     //     List<SelectListItem> categoryValues = (from x in context.categories.ToList()
+    //     //                                            select new SelectListItem
+    //     //                                            {
+    //     //                                                Text = x.CategoryName,
+    //     //                                                Value = x.CategoryId.ToString()
+    //     //                                            }).ToList();
+    //     //     ViewBag.cv = categoryValues;
+    //     //     return View();
 
 
-        }
-    }
+    //     // }
+
+    // }
 
 
 
@@ -108,5 +110,14 @@ public class BlogController : Controller
             }
         }
         return View();
+    }
+
+
+    public IActionResult DeleteBlog(int id)
+    {
+
+        var blogValue = bm.TGetById(id);
+        bm.TDelete(blogValue);
+        return RedirectToAction("BlogListByWriter");
     }
 }
