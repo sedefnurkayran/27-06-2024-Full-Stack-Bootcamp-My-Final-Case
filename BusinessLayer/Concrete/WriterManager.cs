@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
             _writerDal.Insert(writer);
         }
 
-        public Writer GetById(int id)
+        public Writer TGetById(int id)
         {
             throw new NotImplementedException();
         }

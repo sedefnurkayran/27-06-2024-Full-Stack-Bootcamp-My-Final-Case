@@ -19,7 +19,7 @@ namespace BusinessLayer.Concrete
 
         }
 
-        public Contact GetById(int id)
+        public Contact TGetById(int id)
         {
             throw new NotImplementedException();
         }
